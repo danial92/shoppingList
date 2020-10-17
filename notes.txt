@@ -1,0 +1,29 @@
+In the case of lifecycle methods like , componentDidMount, 
+componentWillMount etc, the keyword 'this' is already 
+defined under the hood. So, we don't need binding in that case. 
+But when we define/make a method on our own like 
+something() {
+
+} // We need binding in this case and we do that by writing it like following
+this.someting.bind(this). 
+But we have a work around. Instead of binding it with 'this', like we did above,
+we can use arrow function. like
+
+something = () => {
+
+} // Remember! We can't make 'something' a variable like const something = () => {
+    
+}
+
+When we are dealing with a form inside a certain component, we need to make a state
+inside that particular component. Even though we use Redux, but we want to set form 
+properties like name, email etc in that component coz it belongs to only that particular
+component
+
+Whenever we want to access our global state(redux state), we need to do it like following
+state dot the name of the state
+state name = items
+Hence
+state.items
+
+tokenConfig - pulls the token from localStorage and put it in our header
